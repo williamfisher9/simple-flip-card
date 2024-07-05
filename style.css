@@ -24,6 +24,9 @@ body {
     position: relative;
 
     transition: transform 0.5s;
+
+    /* without it, the 3d effect will not appear.
+    the back will not appear on card flip */
     transform-style: preserve-3d;
 }
 
@@ -68,6 +71,8 @@ h1 {
     -webkit-text-stroke-color: black;
 }
 
+/* apply hover on the wrapper which 
+will not be affected by transformation */
 .wrapper:hover .card {
     transform: rotateY(180deg);
 }
